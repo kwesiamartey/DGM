@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.church.dgm.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_websiteFragment"
+            app:destination="@id/websiteFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_youtubeFragment"
+            app:destination="@id/youtubeFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_myPlayerFragment"
+            app:destination="@id/myPlayerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/websiteFragment"
+        android:name="com.church.dgm.WebsiteFragment"
+        android:label="fragment_website"
+        tools:layout="@layout/fragment_website" />
+    <fragment
+        android:id="@+id/youtubeFragment"
+        android:name="com.church.dgm.YoutubeFragment"
+        android:label="fragment_youtube"
+        tools:layout="@layout/fragment_youtube" />
+    <fragment
+        android:id="@+id/myPlayerFragment"
+        android:name="com.church.dgm.MyPlayerFragment"
+        android:label="fragment_my_player"
+        tools:layout="@layout/fragment_my_player" />
+</navigation>

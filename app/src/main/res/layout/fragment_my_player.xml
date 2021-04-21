@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/background_player">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/adView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                ads:adSize="BANNER"
+                ads:adUnitId="@string/admob_unit_id"></com.google.android.gms.ads.AdView>
+            <com.startapp.sdk.ads.banner.Banner
+                android:id="@+id/startAppBanner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true" />
+            <ImageView
+                android:id="@+id/platyingImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon"/>
+            <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/adView22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                ads:adSize="BANNER"
+                ads:adUnitId="@string/admob_unit_id"></com.google.android.gms.ads.AdView>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_station_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_marginTop="30dp"
+            android:outlineSpotShadowColor="@color/seek_bar_progress"
+            android:shadowColor="@color/text_shadow"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            android:text="DGM Faith Life"
+            android:textColor="@color/white"
+            android:textSize="34dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/txtDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="24dp"
+            android:text="Jesus Christ is the same yesterday, today and forever"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            android:textStyle="bold"/>
+
+        <!-- <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="34dp"
+             android:layout_marginBottom="34dp"
+             android:gravity="center"
+             android:orientation="horizontal">
+
+
+             <ImageButton
+                 android:id="@+id/feedback_button"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:background="@drawable/white_round"
+                 android:padding="12dp"
+                 android:src="@drawable/ic_feedback"
+                 android:text="Back" />
+
+             <LinearLayout
+                 android:layout_width="12dp"
+                 android:layout_height="wrap_content" />
+
+             <ImageButton
+                 android:id="@+id/share_button"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:background="@drawable/white_round"
+                 android:padding="12dp"
+                 android:src="@drawable/ic_share"
+                 android:text="Back" />
+
+             <LinearLayout
+                 android:layout_width="12dp"
+                 android:layout_height="wrap_content" />
+
+             <ImageButton
+                 android:id="@+id/favourite_button"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:background="@drawable/white_round"
+                 android:padding="12dp"
+                 android:src="@drawable/ic_star"
+                 android:text="Next" />
+
+             <LinearLayout
+                 android:layout_width="12dp"
+                 android:layout_height="wrap_content" />
+
+         </LinearLayout>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="20dp"
+                android:scaleType="center"
+                android:src="@drawable/ic_rewind"/>
+
+            <ImageView
+                android:id="@+id/btn_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/white_round"
+                android:backgroundTint="#0BF81C"
+                android:elevation="20dp"
+                android:src="@drawable/ic_play"/>
+            <ImageView
+                android:id="@+id/btn_stop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/white_round"
+                android:backgroundTint="#FFF"
+                android:elevation="20dp"
+                android:src="@drawable/ic_stop"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="20dp"
+                android:src="@drawable/ic_forward"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ProgressBar
+                android:id="@+id/loadingAudio"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:progressTint="@color/white"
+                android:progressBackgroundTint="@color/white"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>
